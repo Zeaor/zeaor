@@ -1,75 +1,43 @@
+<!doctype html>
+<html>
 <head>
 <meta charset="utf-8">
-<title>計算器</title>//網頁標題
-<script src="jquery-1.9.1.min.js"></script>//匯入jQuery
-    <script>
-        function MCK(number) {
-        //jQuery("#num1")等效於原生程式碼中的document.getElementById("num2")
-        //這就是匯入jQuery的優點之一
-           var inputnum1 = jQuery("#num1");
-           var inputnum2 = jQuery("#num2");
-            //直接呼叫val()
-            if(inputnum1.val()==""){
-                alert("第一個數位沒輸入呢!");
-                return false;
-            }
-            if(inputnum2.val()==""){
-                alert("第二個數位沒輸入呢!");
-                return false;
-            }
-            var total=0;
-            //加
-            if(number==1){
-                total=parseInt(inputnum1.val())+parseInt(inputnum2.val());
-            }
-            //減
-            else if(number==2){
-                total=parseInt(inputnum1.val())-parseInt(inputnum2.val());
-            }
-            //乘
-            else if(number==3){
-                total=parseInt(inputnum1.val())*parseInt(inputnum2.val());
-            }
-            //除
-            else if(number==4){
-                total=parseInt(inputnum1.val())/parseInt(inputnum2.val());
-            }
-            //直接呼叫html給result賦值
-            jQuery("#result").html( "<h1>計算結果:<strong style='color: red'>"+total+"</strong></h1>");
-            //清空
-            if(number==5){
-                if(confirm("確定清空嗎?")){
-                //直接呼叫賦值
-                    inputnum1.val("");
-                    inputnum2.val("");
-                    jQuery("#result").html("");
-                }
-                return false;
-            }
-        }
-    </script>
+<title>test</title>
+<style>
+input{
+width: 33px;
+}
+#compute{
+width: 50px;
+}
+</style>
 </head>
 <body>
-//用一個大div包住,給居中效果
-<div style="text-align: center">
-<h1>計算器</h1>
-<!--輸入框-->
-<div>
-第一個數位:<input id="num1" type="number" ><p></p>
-第二個數位:<input id="num2" type="number"><p></p>
+<div id="content">
+(<input id="num1" type="text">*
+<input id="num2" type="text">)/
+<input id="num3" type="text">+0.01=
+<input id="result" type="text">
+<input type="button" id="compute" value="计算">
 </div>
-<!--五個按鈕-->
-<div>
-    <input type="button" value="相加" style="color: red" onclick="MCK(1)">
-    <input type="button" value="相減" style="color: purple" onclick="MCK(2)">
-    <input type="button" value="相乘" style="color: green" onclick="MCK(3)">
-    <input type="button" value="相除" style="color: yellow" onclick="MCK(4)">
-    <input type="button" value="清空" style="color: blue" onclick="MCK(5)">
-
-    <!--結果顯示-->
-    <div id="result" style="font-size: 20px">
-    </div>
-</div>
-</div>
+<script>
+var n1 = document.getElementById('num1');
+var n2 = document.getElementById('num2');
+var n3 = document.getElementById('num3');
+var rst = document.getElementById('result');
+var com = document.getElementById("compute");
+com.addEventListener("click",function(){
+if(n1.value.length == 0 ||n2.value.length == 0 ||n3.value.length == 0){
+alert("请填写完毕再进行计算！");
+return false;
+}
+if(n3.value == 0){
+alert("除数不能为 0!");
+return false;
+}
+var result = (n1.value*n2.value)/n3.value+0.01;
+rst.value = result;
+})
+</script>
 </body>
 </html>

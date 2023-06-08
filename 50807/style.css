@@ -1,0 +1,114 @@
+/* CSS Document */
+
+body { background-color:#B7AFA3; font-family:Verdana, Arial, Helvetica, sans-serif; padding:0; margin:15px 0px;}
+body a { color:#000000; text-decoration:none; font-weight:800; }
+body a:hover { color: #999999; text-decoration:none; font-weight:800 }
+body a:hover { color: #999999; text-decoration:underline; font-weight:800 }
+
+#container {
+	width:1000px;
+	font-size:110%;
+	background: #FFF url(./images/bksub.gif) repeat-y;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+
+#header {
+	background: url(./images/header.jpg);
+	width:1000px;
+	height:262px;
+	float:left;
+	border-bottom: 20px solid #FFF;
+}
+#header a { position:relative; top:25px; left:25px; font-size: 180%;color: #6D929B; text-decoration:none;}
+#header a:hover {text-decoration:underline; }
+#header a:visited {text-decoration:none;}
+
+#slogan {position:relative; top:120px; left:400px; color:#FFFFFF; font-size:150%;}
+
+img { border:0; padding:0}
+#leftcol {
+	width:150px;
+	float:left;
+	padding-top: 20px;
+	padding-right: 0px;
+	padding-bottom: 20px;
+	padding-left: 0px;
+}
+#nav {
+	width:150px;
+	float:left;
+	text-decoration:none;
+	padding-left:15px;
+	margin-top: 15px;
+	margin-right: 0;
+	margin-bottom: 15px;
+	margin-left: 0;
+}
+#nav ul, #nav li { list-style:none ; margin:0px; text-align:left; padding:0px; }
+			#nav li { color:ffffff;  }
+				#nav li a {width: 110px; padding:5px 0px 5px 15px; background-color:#EFEFDE; color:#000; display:block ; font-weight:bold ; text-decoration:none ; }
+				#nav li a:hover {
+	color:#000000;
+	background-color:#FF6600;
+}
+				#nav li a {
+	background-color:#FF6600;
+	color:#fff;
+	text-decoration:underline;
+}
+
+#main {
+	color:#00CC33;
+	float:left;
+	width:800px;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 20px;
+	font-weight: bold;
+}
+h1 { font-size:120%; font-weight:800; color: #6D929B;}
+
+#footer {
+	width:1000px;
+	background: #ffffff;
+}
+#insidefooter {
+	width:1000px;
+	border-top: 10px solid #B7AFA3;
+	text-align:center;
+	float:left;
+	padding-top:15px;
+	background-color:#FFFFFF;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+.clear { clear:both ; font-size:1px }
+.t01 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	color: #F63;
+}
+.t00 {
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 36px;
+	color: #66F;
+}
+.wod {
+	color: #F93;
+}
+.inasssda {
+	font-size: 16px;
+	color: #663;
+}
+.inaghhas {
+	font-size: 16px;
+	color: #336633;
+}

@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>Unit Conversion</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <div>
@@ -20,14 +19,37 @@
         <option value="ft">ft</option>
         <option value="in">in</option>
       </select>
+      <button id="convertLengthBtn">Convert</button>
     </div>
 
     <div class="result">
       <h3>Results:</h3>
-      <p id="resultM"></p>
-      <p id="resultCm"></p>
-      <p id="resultFt"></p>
-      <p id="resultIn"></p>
+      <table id="lengthResultTable">
+        <thead>
+          <tr>
+            <th>Unit</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>m</td>
+            <td id="resultM"></td>
+          </tr>
+          <tr>
+            <td>cm</td>
+            <td id="resultCm"></td>
+          </tr>
+          <tr>
+            <td>ft</td>
+            <td id="resultFt"></td>
+          </tr>
+          <tr>
+            <td>in</td>
+            <td id="resultIn"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <h2>Time Conversion:</h2>
@@ -40,14 +62,36 @@
         <option value="min">min</option>
         <option value="sec">sec</option>
       </select>
+      <button id="convertTimeBtn">Convert</button>
     </div>
 
     <div class="result">
       <h3>Results:</h3>
-      <p id="resultHr"></p>
-      <p id="resultMin"></p>
-      <p id="resultSec"></p>
+      <table id="timeResultTable">
+        <thead>
+          <tr>
+            <th>Unit</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>hr</td>
+            <td id="resultHr"></td>
+          </tr>
+          <tr>
+            <td>min</td>
+            <td id="resultMin"></td>
+          </tr>
+          <tr>
+            <td>sec</td>
+            <td id="resultSec"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

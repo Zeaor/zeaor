@@ -1,20 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Unit Conversion - Kilograms to Grams</title>
+  <title>Unit Conversion</title>
   <script>
     function convert() {
-      var inputKg = document.getElementById("inputKg").value;
-      var resultGrams = inputKg * 1000;
-      document.getElementById("resultGrams").innerHTML = resultGrams + " g";
+      // Length conversion
+      var inputLengthUnit = document.getElementById("inputLengthUnit").value;
+      var inputLengthValue = parseFloat(document.getElementById("inputLengthValue").value);
+      var resultLength = 0;
+
+      if (inputLengthUnit === "m") {
+        resultLength = inputLengthValue;
+      } else if (inputLengthUnit === "cm") {
+        resultLength = inputLengthValue / 100;
+      } else if (inputLengthUnit === "ft") {
+        resultLength = inputLengthValue * 0.3048;
+      } else if (inputLengthUnit === "in") {
+        resultLength = inputLengthValue * 0.0254;
+      }
+
+      document.getElementById("resultM").innerHTML = resultLength + " m";
+
+      var resultCm = resultLength * 100;
+      document.getElementById("resultCm").innerHTML = resultCm + " cm";
+
+      var resultFt = resultLength / 0.3048;
+      document.getElementById("resultFt").innerHTML = resultFt + " ft";
+
+      var resultIn = resultLength / 0.0254;
+      document.getElementById("resultIn").innerHTML = resultIn + " in";
+
+      // Time conversion
+      var inputTimeUnit = document.getElementById("inputTimeUnit").value;
+      var inputTimeValue = parseFloat(document.getElementById("inputTimeValue").value);
+      var resultTime = 0;
+
+      if (inputTimeUnit === "hr") {
+        resultTime = inputTimeValue;
+      } else if (inputTimeUnit === "min") {
+        resultTime = inputTimeValue / 60;
+      } else if (inputTimeUnit === "sec") {
+        resultTime = inputTimeValue / 3600;
+      }
+
+      document.getElementById("resultHr").innerHTML = resultTime + " hr";
+
+      var resultMin = resultTime * 60;
+      document.getElementById("resultMin").innerHTML = resultMin + " min";
+
+      var resultSec = resultTime * 3600;
+      document.getElementById("resultSec").innerHTML = resultSec + " sec";
     }
   </script>
 </head>
 <body>
-  <h1>Unit Conversion - Kilograms to Grams</h1>
-  <label for="inputKg">Enter value in kilograms:</label>
-  <input type="number" id="inputKg">
+  <h1>Unit Conversion</h1>
+
+  <h2>Length Conversion:</h2>
+  <label for="inputLengthValue">Enter value:</label>
+  <input type="number" id="inputLengthValue">
+  <label for="inputLengthUnit">Select unit:</label>
+  <select id="inputLengthUnit">
+    <option value="m">m</option>
+    <option value="cm">cm</option>
+    <option value="ft">ft</option>
+    <option value="in">in</option>
+  </select>
   <button onclick="convert()">Convert</button>
-  <p id="resultGrams"></p>
+
+  <h3>Results:</h3>
+  <p id="resultM"></p>
+  <p id="resultCm"></p>
+  <p id="resultFt"></p>
+  <p id="resultIn"></p>
+
+  <h2>Time Conversion:</h2>
+  <label for="inputTimeValue">Enter value:</label>
+  <input type="number" id="inputTimeValue">
+  <label for="inputTimeUnit">Select unit:</label>
+  <select id="inputTimeUnit">
+    <option value="hr">hr</option>
+    <option value="min">min</option>
+    <option value="sec">sec</option>
+  </select>
+  <button onclick="convert()">Convert</button>
+
+  <h3>Results:</h3>
+  <p id="resultHr"></p>
+  <p id="resultMin"></p>
+  <p id="resultSec"></p>
 </body>
 </html>
